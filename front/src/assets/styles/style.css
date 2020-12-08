@@ -1,0 +1,10 @@
+.card-lists {
+    background-color: wheat;
+    height: 100vh;
+    /* display: flex; */
+    margin: 10px; 
+}
+
+.card-list {
+    color: #000;
+}

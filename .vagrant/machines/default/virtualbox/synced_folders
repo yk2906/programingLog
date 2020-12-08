@@ -1,0 +1,1 @@
+{"nfs":{"/home/vagrant/workdir":{"create":"true","guestpath":"/home/vagrant/workdir","hostpath":"/C/Users/yk0956/Desktop/vagrant_dev","disabled":false,"type":"nfs","__vagrantfile":true,"map_uid":0,"map_gid":0,"nfs_version":3,"nfs_udp":true,"uuid":"2251957161","mount_options":["vers=3","udp","nolock"]}},"virtualbox":{}}
