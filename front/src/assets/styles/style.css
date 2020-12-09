@@ -1,10 +1,25 @@
-.card-lists {
+.app-bar-background {
     background-color: wheat;
+}
+
+.card-lists {
     height: 100vh;
     /* display: flex; */
-    margin: 10px; 
+    /* margin: 10px;  */
 }
 
 .card-list {
-    color: #000;
+}
+
+.study-time {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.study-time h4 {
+    flex-basis: 33%;
+}
+
+.study-time p {
 }
