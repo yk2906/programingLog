@@ -1,9 +1,10 @@
 .app-bar-background {
     background-color: wheat;
+    height: 100vh;
 }
 
 .card-lists {
-    height: 100vh;
+    /* height: 100vh; */
     /* display: flex; */
     /* margin: 10px;  */
 }
@@ -22,4 +23,30 @@
 }
 
 .study-time p {
+}
+
+.study-time-create-new {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.study-time-create-new h3 {
+    margin: 10px;
+    align-self: center;
+}
+
+.task-create-new {
+    display: flex;
+    justify-content: center;
+}
+
+.complete-button {
+    margin: 50px;
+}
+
+.mypage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

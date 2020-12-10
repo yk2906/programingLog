@@ -4,12 +4,11 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import JavaScriptLogo from '../../assets/img/javascript.svg'
+import JavaScriptLogo from '../../assets/img/javascript.svg';
 import CompletingGraph from './CompletingGraph';
+import CardActionArea from '@material-ui/core/CardActionArea';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,46 +43,48 @@ export default function CardList() {
 
   return (
     <Card className={classes.root}>
-      <CardHeader
-        avatar={
-          <Avatar variant="square" alt="icon" src={JavaScriptLogo}>
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={
-          <Typography variant="h5"　align="center">
-            JavaScript
-          </Typography>}
-      />
-      <CardContent>
-        <Typography variant="subtitle1" color="textSecondary" component="p">
-          <h3>学習時間</h3>
-          <div className="study-time">
-            <h4>今日</h4>
-            <h4>今月</h4>
-            <h4>合計</h4>
-            <p>1h</p>
-            <p>1h</p>
-            <p>1h</p>
-          </div>
-        </Typography>
-        <Typography variant="subtitle1" color="textSecondary" component="p">
-          <h3>未達成タスク</h3>
-          <div className="imcomplet-task">
-            <p>配列、for文を勉強する</p>
-            <p>非同期処理を勉強する</p>
-            <p>関数を実装する</p>
-          </div>
-        </Typography>
-        <Typography variant="subtitle1" color="textSecondary" component="p">
-          <h3>達成タスク数</h3>
-        </Typography>
-        <CompletingGraph />
-      </CardContent>
+      <CardActionArea>
+        <CardHeader
+          avatar={
+            <Avatar variant="square" alt="icon" src={JavaScriptLogo}>
+            </Avatar>
+          }
+          // action={
+          //   <IconButton aria-label="settings">
+          //     <MoreVertIcon />
+          //   </IconButton>
+          //}
+          title={
+            <Typography variant="h5"　align="left">
+              JavaScript
+            </Typography>}
+        />
+        <CardContent>
+          <Typography variant="subtitle1" color="textSecondary" component="p">
+            <h3>学習時間</h3>
+            <div className="study-time">
+              <h4>今日</h4>
+              <h4>今月</h4>
+              <h4>合計</h4>
+              <p>1h</p>
+              <p>1h</p>
+              <p>1h</p>
+            </div>
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary" component="p">
+            <h3>未達成タスク</h3>
+            <div className="imcomplet-task">
+              <p>配列、for文を勉強する</p>
+              <p>非同期処理を勉強する</p>
+              <p>関数を実装する</p>
+            </div>
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary" component="p">
+            <h3>達成タスク数</h3>
+          </Typography>
+          <CompletingGraph />
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

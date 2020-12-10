@@ -133,15 +133,15 @@ export default function Header() {
         </Toolbar>
       </AppBar>
       <div className="app-bar-background">
-      <TabPanel value={value} index={0}>
-        <CardLists />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <CreateNew />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <MyPage />
-      </TabPanel>
+        <TabPanel value={value} index={0}>
+          <CardLists />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <CreateNew />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <MyPage />
+        </TabPanel>
       </div>
     </div>
   );
