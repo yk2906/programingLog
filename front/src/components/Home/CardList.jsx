@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -9,6 +9,7 @@ import { red } from '@material-ui/core/colors';
 import JavaScriptLogo from '../../assets/img/javascript.svg';
 import CompletingGraph from './CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import Snackbar from '@material-ui/core/Snackbar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,8 +42,15 @@ export default function CardList() {
   //   setExpanded(!expanded);
   // };
 
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} onClick={handleClick}>
+      <Snackbar open={open} autoHideDuration={6000}></Snackbar>
       <CardActionArea>
         <CardHeader
           avatar={
