@@ -108,7 +108,7 @@ export default function Header() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <AccountCircle />
+                <AccountCircle style={{ fontSize: 40 }} />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -125,8 +125,8 @@ export default function Header() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>ログイン</MenuItem>
+                <MenuItem onClick={handleClose}>新規登録</MenuItem>
               </Menu>
             </div>
           )}
