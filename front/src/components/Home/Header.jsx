@@ -14,6 +14,8 @@ import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import CreateNew from '../CreateNew/CreateNew';
 import MyPage from '../MyPage/MyPage';
+import StudyTime from './StudyTime/StudyTime';
+import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,6 +62,8 @@ function a11yProps(index) {
 }
 
 
+
+
 export default function Header() {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
@@ -84,8 +88,8 @@ export default function Header() {
   };
 
   return (
+    <Router>
     <div className={classes.root}>
-      
       <AppBar position="static">
         <Toolbar>
           {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
@@ -95,9 +99,9 @@ export default function Header() {
             プログラミングログ
           </Typography>
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" >
-            <Tab label="ホーム" {...a11yProps(0)} />
-            <Tab label="新規登録" {...a11yProps(1)} />
-            <Tab label="マイページ" {...a11yProps(2)} />
+            <Tab component={Link} to="/home" label="ホーム" {...a11yProps(0)} />
+            <Tab component={Link} to="/new" label="新規登録" {...a11yProps(1)} />
+            <Tab component={Link} to="/mypage" label="マイページ" {...a11yProps(2)} />
           </Tabs>
           {auth && (
             <div>
@@ -133,16 +137,15 @@ export default function Header() {
         </Toolbar>
       </AppBar>
       <div className="app-bar-background">
-        <TabPanel value={value} index={0}>
-          <CardLists />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <CreateNew />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <MyPage />
+        <TabPanel>
+          <Switch>
+            <Route path="/home" component={CardLists}/>
+            <Route path="/new" component={CreateNew}/>
+            <Route path="/mypage" component={MyPage}/>
+          </Switch>
         </TabPanel>
       </div>
     </div>
+    </Router>
   );
 }

@@ -5,12 +5,11 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import JavaScriptLogo from '../../assets/img/javascript.svg';
-import CompletingGraph from './CompletingGraph';
+import JavaScriptLogo from '../../../assets/img/javascript.svg'
+import CompletingGraph from '../CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch } from 'react-router-dom';
-import StudyTime from './StudyTime/StudyTime';
+import { red } from '@material-ui/core/colors';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CardList() {
+export default function StudyTime() {
   const classes = useStyles();
   // const [expanded, setExpanded] = React.useState(false);
 
