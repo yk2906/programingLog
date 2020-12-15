@@ -10,9 +10,9 @@ const CardLists = () => {
       <div className="card-lists">
         <Switch>
           <Route path="/home">
-            <CardList />
-            <CardList />
-            <CardList />
+            <CardList >
+              {}
+            </CardList>
           </Route>
         </Switch>
       </div>

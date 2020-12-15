@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import InputedTextField from './InputedTextField';
 import Button from '@material-ui/core/Button';
+import EditForm from './EditForm';
 
 const MyPage = () => {
+	const [open, setOpen] = React.useState(false);
+	const handleClickOpen = () => {
+		setOpen(true)
+	}
+
 	return(
 		<div className="mypage">
 			<div className="avatar">
@@ -19,7 +25,7 @@ const MyPage = () => {
 				<InputedTextField title={"他サイト・サービスのリンク"} text={"テキスト3"} />
 			</div>
 			<div className="edit-button">
-				<Button variant="contained" color="primary" disableElevation>
+				<Button variant="contained" color="primary" disableElevation onClick={handleClickOpen}>
 					編集する
 				</Button>
 			</div>	
