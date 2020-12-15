@@ -9,7 +9,6 @@ import JavaScriptLogo from '../../../assets/img/javascript.svg'
 import CompletingGraph from '../CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { red } from '@material-ui/core/colors';
-import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,25 +35,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function StudyTime() {
   const classes = useStyles();
-  // const [expanded, setExpanded] = React.useState(false);
-
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  // };
 
   return (
-    <Card className={classes.root} >
+    <div className="status">
+    <Card className={classes.root} style={{maxWidth: "none"}}>
       <CardActionArea>
         <CardHeader
           avatar={
             <Avatar variant="square" alt="icon" src={JavaScriptLogo}>
             </Avatar>
           }
-          // action={
-          //   <IconButton aria-label="settings">
-          //     <MoreVertIcon />
-          //   </IconButton>
-          //}
           title={
             <Typography variant="h5"　align="left">
               JavaScript
@@ -87,5 +77,6 @@ export default function StudyTime() {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   );
 }

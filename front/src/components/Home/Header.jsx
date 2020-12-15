@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,8 +14,8 @@ import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import CreateNew from '../CreateNew/CreateNew';
 import MyPage from '../MyPage/MyPage';
-import StudyTime from './StudyTime/StudyTime';
-import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch, useParams } from 'react-router-dom';
+import Status from './Status/Status';
+import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch, withRouter } from 'react-router-dom';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -63,8 +63,7 @@ function a11yProps(index) {
 
 
 
-
-export default function Header() {
+export default function Header(props) {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -86,6 +85,8 @@ export default function Header() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  // const match = useRouteMatch();
 
   return (
     <Router>
@@ -139,13 +140,16 @@ export default function Header() {
       <div className="app-bar-background">
         <TabPanel>
           <Switch>
-            <Route path="/home" component={CardLists}/>
+            <Route path="/home" component={CardLists} />
             <Route path="/new" component={CreateNew}/>
             <Route path="/mypage" component={MyPage}/>
+            <Route path="/status" component={Status}/>
           </Switch>
         </TabPanel>
       </div>
     </div>
     </Router>
   );
+
+  
 }

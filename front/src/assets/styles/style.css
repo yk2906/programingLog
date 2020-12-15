@@ -4,9 +4,9 @@
 }
 
 .card-lists {
-    /* height: 100vh; */
-    /* display: flex; */
-    /* margin: 10px;  */
+    display: flex;
+    margin: 10px; 
+    justify-content: space-around;
 }
 
 

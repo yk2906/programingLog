@@ -9,8 +9,7 @@ import { red } from '@material-ui/core/colors';
 import JavaScriptLogo from '../../assets/img/javascript.svg';
 import CompletingGraph from './CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch } from 'react-router-dom';
-import StudyTime from './StudyTime/StudyTime';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,27 +34,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CardList() {
+export default function CardList(props) {
   const classes = useStyles();
-  // const [expanded, setExpanded] = React.useState(false);
-
-  // const handleExpandClick = () => {
-  //   setExpanded(!expanded);
-  // };
+  const history = useHistory();
+  const hancleLink = path => history.push(path);
 
   return (
-    <Card className={classes.root} >
+    <Card className={classes.root} onClick={() => hancleLink(`/status`)}>
       <CardActionArea>
         <CardHeader
           avatar={
             <Avatar variant="square" alt="icon" src={JavaScriptLogo}>
             </Avatar>
           }
-          // action={
-          //   <IconButton aria-label="settings">
-          //     <MoreVertIcon />
-          //   </IconButton>
-          //}
           title={
             <Typography variant="h5"　align="left">
               JavaScript
