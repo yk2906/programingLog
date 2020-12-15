@@ -6,25 +6,13 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-export default function EditForm() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+export default function EditForm(props) {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open alert dialog
-      </Button>
       <Dialog
-        open={open}
-        onClose={handleClose}
+        open={props.open}
+        onClose={props.handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
@@ -36,10 +24,10 @@ export default function EditForm() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={props.handleClose} color="primary">
             Disagree
           </Button>
-          <Button onClick={handleClose} color="primary" autoFocus>
+          <Button onClick={props.handleClose} color="primary" autoFocus>
             Agree
           </Button>
         </DialogActions>

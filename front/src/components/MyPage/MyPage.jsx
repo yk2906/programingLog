@@ -6,9 +6,13 @@ import EditForm from './EditForm';
 
 const MyPage = () => {
 	const [open, setOpen] = React.useState(false);
+
 	const handleClickOpen = () => {
 		setOpen(true)
 	}
+	const handleClose = () => {
+		setOpen(false);
+	};
 
 	return(
 		<div className="mypage">
@@ -29,6 +33,7 @@ const MyPage = () => {
 					編集する
 				</Button>
 			</div>	
+			<EditForm open={open} handleClickOpen={handleClickOpen} handleClose={handleClose} />
 		</div>
 	)
 }
