@@ -1,6 +1,6 @@
 .app-bar-background {
-    background-color: wheat;
     height: 100vh;
+    background-color: wheat;
 }
 
 .card-lists {
@@ -61,4 +61,33 @@
 .input-form {
     width: 50%;
     margin: auto;
+}
+
+.landing-page {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.landing-page-content1 {
+    /* flex-basis: 50%; */
+    align-self: center;
+}
+
+.landing-page-image1 {
+    flex-basis: 50%;
+}
+
+.landing-page-content2 {
+    /* flex-basis: 50%; */
+    align-self: center;
+}
+
+.landing-page-image2 {
+    flex-basis: 50%;
+}
+
+.sign-up-button {
+    flex-basis: 100%;
 }

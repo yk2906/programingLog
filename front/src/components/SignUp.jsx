@@ -12,6 +12,7 @@ const SignUp = () => {
             <InputForm subtitle={"メールアドレス"} type={"email"} />
             <InputForm subtitle={"パスワード"} type={"password"} />
             <InputForm subtitle={"パスワード（確認）"} type={"password"} />
+            <a href="/sign_in">ログインはこちら</a>
         </div>
     )
 }

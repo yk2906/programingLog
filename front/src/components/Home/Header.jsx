@@ -18,6 +18,7 @@ import Status from './Status/Status';
 import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch, withRouter } from 'react-router-dom';
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
+import LandingPageContent from '../LandingPage';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -140,7 +141,7 @@ export default function Header(props) {
         </Toolbar>
       </AppBar>
       <div className="app-bar-background">
-        <TabPanel>
+        <TabPanel style={{backgroundColor: "wheat"}}>
           <Switch>
             <Route path="/home" component={CardLists} />
             <Route path="/new" component={CreateNew} />
@@ -148,6 +149,7 @@ export default function Header(props) {
             <Route path="/status" component={Status} />
             <Route path="/sign_up" component={SignUp} />
             <Route path="/sign_in" component={SignIn} />
+            <Route path="/" component={LandingPageContent} />
           </Switch>
         </TabPanel>
       </div>

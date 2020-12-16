@@ -10,6 +10,7 @@ const SignIn = () => {
             </Typography>
             <InputForm subtitle={"メールアドレス"} type={"email"}/>
             <InputForm subtitle={"パスワード"} type={"password"}/>
+            <a href="/sign_up">新規登録はこちら</a>
         </div>
     )
 }
