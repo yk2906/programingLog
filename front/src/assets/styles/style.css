@@ -57,3 +57,8 @@
 .edit-button {
     margin: 20px auto 20px auto;
 }
+
+.input-form {
+    width: 50%;
+    margin: auto;
+}

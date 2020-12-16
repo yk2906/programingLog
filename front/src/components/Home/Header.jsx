@@ -16,6 +16,8 @@ import CreateNew from '../CreateNew/CreateNew';
 import MyPage from '../MyPage/MyPage';
 import Status from './Status/Status';
 import { BrowserRouter as Router, Link, Switch, Route, useRouteMatch, withRouter } from 'react-router-dom';
+import SignUp from '../SignUp';
+import SignIn from '../SignIn';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -141,9 +143,11 @@ export default function Header(props) {
         <TabPanel>
           <Switch>
             <Route path="/home" component={CardLists} />
-            <Route path="/new" component={CreateNew}/>
-            <Route path="/mypage" component={MyPage}/>
-            <Route path="/status" component={Status}/>
+            <Route path="/new" component={CreateNew} />
+            <Route path="/mypage" component={MyPage} />
+            <Route path="/status" component={Status} />
+            <Route path="/sign_up" component={SignUp} />
+            <Route path="/sign_in" component={SignIn} />
           </Switch>
         </TabPanel>
       </div>

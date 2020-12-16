@@ -3,8 +3,8 @@ import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import InputEditForm from './InputEditForm';
 
 export default function EditForm(props) {
 
@@ -16,19 +16,25 @@ export default function EditForm(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">マイページを編集</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous location data to
-            Google, even when no apps are running.
-          </DialogContentText>
+          <InputEditForm 
+            label={"プロフィール"}
+            multiline={true}
+            rows={6}
+            type={"text"} 
+          />
+          <InputEditForm 
+            label={"他サイト・サービスのリンク"} 
+            type={"text"}
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={props.handleClose} color="primary">
-            Disagree
+            キャンセル
           </Button>
           <Button onClick={props.handleClose} color="primary" autoFocus>
-            Agree
+            完了
           </Button>
         </DialogActions>
       </Dialog>
