@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -7,6 +7,13 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import InputEditForm from './InputEditForm';
 
 export default function EditForm(props) {
+
+  
+  const [submitted, setSubmitted] = useState(false)
+
+	const submit = () => {
+		props.setSubmitted(!submitted)
+	}
 
   return (
     <div>
@@ -22,11 +29,15 @@ export default function EditForm(props) {
             label={"プロフィール"}
             multiline={true}
             rows={6}
-            type={"text"} 
+            type={"text"}
+            value={props.profile}
+            onChange={props.inputProfile}
           />
           <InputEditForm 
             label={"他サイト・サービスのリンク"} 
             type={"text"}
+            value={props.link}
+            onChange={props.inputLink}
           />
         </DialogContent>
         <DialogActions>

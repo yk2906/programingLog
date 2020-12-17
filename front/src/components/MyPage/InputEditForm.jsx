@@ -11,6 +11,8 @@ const InputEditForm = (props) => {
         multiline={props.multiline}
         rows={props.rows}
         type={props.type}
+        // value={props.value}
+        onChange={props.onChange}
          />
     )
 }

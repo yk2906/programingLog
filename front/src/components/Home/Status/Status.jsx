@@ -33,13 +33,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StudyTime() {
+export default function Status() {
   const classes = useStyles();
 
   return (
     <div className="status">
     <Card className={classes.root} style={{maxWidth: "none"}}>
-      <CardActionArea>
         <CardHeader
           avatar={
             <Avatar variant="square" alt="icon" src={JavaScriptLogo}>
@@ -75,7 +74,6 @@ export default function StudyTime() {
           </Typography>
           <CompletingGraph />
         </CardContent>
-      </CardActionArea>
     </Card>
     </div>
   );

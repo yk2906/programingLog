@@ -30,7 +30,8 @@ export default function InputedTextField(props) {
 				<CardHeader title={props.title} />
 				<CardContent>
 					<Typography className={classes.title} color="textPrimary" gutterBottom>
-						{props.text}
+						{props.profile}
+            {props.link}
 					</Typography>
 				</CardContent>
 			</Card>
