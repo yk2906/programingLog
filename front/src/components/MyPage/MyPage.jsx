@@ -6,8 +6,8 @@ import EditForm from './EditForm';
 
 const MyPage = () => {
 	const [open, setOpen] = React.useState(false);
-	const [profile, setProfile] = useState("");
-	const [link, setLink] = useState("");
+	const [profile, setProfile] = useState("")
+	const [link, setLink] = useState("")
 
 	const inputProfile = (e) => {
 		setProfile(e.target.value)
@@ -15,6 +15,12 @@ const MyPage = () => {
 
 	const inputLink = (e) => {
 		setLink(e.target.value)
+	}
+
+	const submitForm = (e) => {
+		setProfile(e.target.value)
+		setLink(e.target.value)
+		return handleClose()
 	}
 	
 
@@ -24,6 +30,11 @@ const MyPage = () => {
 	const handleClose = () => {
 		setOpen(false);
 	};
+
+	const handleEditFormClose = () => {
+		setProfile("")
+		setLink("")
+	}
 
  
 	return(
@@ -36,9 +47,9 @@ const MyPage = () => {
 				/>
 			</div>
 			<div className="inputed-text-field">
-				<InputedTextField title={"プロフィール"} profile={profile} />
+				<InputedTextField title={"プロフィール"} profile={submitForm} />
 				<InputedTextField title={"学習データ"} text={"テキスト2"}/>
-				<InputedTextField title={"他サイト・サービスのリンク"} link={link} />
+				<InputedTextField title={"他サイト・サービスのリンク"} link={submitForm} />
 				
 			</div>
 			<div className="edit-button">
@@ -51,7 +62,9 @@ const MyPage = () => {
 				handleClickOpen={handleClickOpen} 
 				handleClose={handleClose}
 				inputProfile={inputProfile}
-				inputLink={inputLink} />
+				inputLink={inputLink}
+				handleEditFormClose={handleEditFormClose}
+				submitForm={submitForm} />
 		</div>
 	)
 }

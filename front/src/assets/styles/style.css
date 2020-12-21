@@ -91,3 +91,18 @@
 .sign-up-button {
     flex-basis: 100%;
 }
+
+.tasks-input-area {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+.tasks-textfield {
+    flex-basis: 60%;
+    margin: 10px;
+}
+
+.tasks-add-button {
+    align-self: center;
+}

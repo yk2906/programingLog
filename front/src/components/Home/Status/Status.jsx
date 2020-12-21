@@ -9,6 +9,7 @@ import JavaScriptLogo from '../../../assets/img/javascript.svg'
 import CompletingGraph from '../CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { red } from '@material-ui/core/colors';
+import Tasks from './Tasks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,27 +53,20 @@ export default function Status() {
         <CardContent>
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>学習時間</h3>
-            <div className="study-time">
-              <h4>今日</h4>
-              <h4>今月</h4>
-              <h4>合計</h4>
-              <p>1h</p>
-              <p>1h</p>
-              <p>1h</p>
-            </div>
           </Typography>
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>未達成タスク</h3>
-            <div className="imcomplet-task">
-              <p>配列、for文を勉強する</p>
-              <p>非同期処理を勉強する</p>
-              <p>関数を実装する</p>
+            <div>
+              <Tasks />
             </div>
           </Typography>
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>達成タスク数</h3>
           </Typography>
           <CompletingGraph />
+          <Typography variant="subtitle1" color="textSecondary" component="p">
+            <h3>ブックマーク</h3>
+          </Typography>
         </CardContent>
     </Card>
     </div>

@@ -8,13 +8,6 @@ import InputEditForm from './InputEditForm';
 
 export default function EditForm(props) {
 
-  
-  const [submitted, setSubmitted] = useState(false)
-
-	const submit = () => {
-		props.setSubmitted(!submitted)
-	}
-
   return (
     <div>
       <Dialog
@@ -44,7 +37,7 @@ export default function EditForm(props) {
           <Button onClick={props.handleClose} color="primary">
             キャンセル
           </Button>
-          <Button onClick={props.handleClose} color="primary" autoFocus>
+          <Button onClick={props.submitForm} color="primary" autoFocus>
             完了
           </Button>
         </DialogActions>

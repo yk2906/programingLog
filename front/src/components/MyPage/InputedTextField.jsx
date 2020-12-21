@@ -31,7 +31,7 @@ export default function InputedTextField(props) {
 				<CardContent>
 					<Typography className={classes.title} color="textPrimary" gutterBottom>
 						{props.profile}
-            {props.link}
+						{props.link}
 					</Typography>
 				</CardContent>
 			</Card>
