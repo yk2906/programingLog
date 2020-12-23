@@ -5,6 +5,8 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import DeleteIcon from '@material-ui/icons/Delete';
+import Task from './Task'
+import CheckBox from '@material-ui/core/Checkbox'
 
     
 const Tasks = () => {
@@ -26,20 +28,31 @@ const Tasks = () => {
     setTasks([...tasks, {
       title: taskName,
       doing: false,
+      check: <CheckBox />,
       delete: <DeleteIcon />
     }])
     setTaskName('')
   }
 
+  const handleCheckBoxToggle = (value) => {
+    setTasks(tasks.filter(x => {
+      if (x === value) x.doing = !x.doing
+      return x
+    }))
+  }
+
   return(
     <div>
       <div>
-        <List component='ul'>
+        <List>
             {tasks.map((value, index) => (
-            <ListItem component='li'>
-              <ListItemText key={index.toString()}>{value.title}</ListItemText>
-              {value.delete}
-            </ListItem>
+              <Task 
+                title={value.title} 
+                doing={value.doing} 
+                delete={value.delete}
+                index={index.toString()}
+                check={value.check}
+                handleCheckBoxToggle={handleCheckBoxToggle} />
             ))}
         </List>
       </div>

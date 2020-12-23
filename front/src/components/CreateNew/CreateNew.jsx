@@ -60,15 +60,19 @@ const useStyles = makeStyles((theme) => ({
 				</div>
 				<h2>タスク</h2>
 				<div className="task-create-new">
-					<TextField id="outlined-basic" variant="outlined" />
-					<Button
-						variant="contained"
-						color="primary"
-						className={classes.button}
-						endIcon={<AddIcon />}
-					>
-						追加
-				</Button>
+					<div>
+						<TextField id="outlined-basic" variant="outlined" />
+					</div>
+					<div className="task-create-new-button">
+						<Button
+							variant="contained"
+							color="primary"
+							className={classes.button}
+							endIcon={<AddIcon />}
+						>
+							追加
+						</Button>
+					</div>
 				</div>
 				<div className="complete-button">
 					<Button variant="contained" size="large" color="primary" className={classes.margin}>
