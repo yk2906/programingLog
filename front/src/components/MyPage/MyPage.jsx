@@ -5,21 +5,29 @@ import Button from '@material-ui/core/Button';
 import EditForm from './EditForm';
 
 const MyPage = () => {
+	const initialState = {
+		profile: '',
+		link: ''
+	}
+
 	const [open, setOpen] = React.useState(false);
-	const [profile, setProfile] = useState("")
-	const [link, setLink] = useState("")
+	const [state, setState] = useState({initialState})
+	const [editProfile, setEditProfile] = useState('')
+	const [editLink, setEditLink] = useState('')
 
 	const inputProfile = (e) => {
-		setProfile(e.target.value)
+		setEditProfile(e.target.value)
 	}
 
 	const inputLink = (e) => {
-		setLink(e.target.value)
+		setEditLink(e.target.value)
 	}
 
-	const submitForm = (e) => {
-		setProfile(e.target.value)
-		setLink(e.target.value)
+	const submitForm = () => {
+		setState({
+			profile: editProfile,
+			link: editLink
+		})
 		return handleClose()
 	}
 	
@@ -30,11 +38,6 @@ const MyPage = () => {
 	const handleClose = () => {
 		setOpen(false);
 	};
-
-	const handleEditFormClose = () => {
-		setProfile("")
-		setLink("")
-	}
 
  
 	return(
@@ -47,9 +50,9 @@ const MyPage = () => {
 				/>
 			</div>
 			<div className="inputed-text-field">
-				<InputedTextField title={"プロフィール"} profile={submitForm} />
+				<InputedTextField title={"プロフィール"} profile={state.profile} />
 				<InputedTextField title={"学習データ"} text={"テキスト2"}/>
-				<InputedTextField title={"他サイト・サービスのリンク"} link={submitForm} />
+				<InputedTextField title={"他サイト・サービスのリンク"} link={state.link} />
 				
 			</div>
 			<div className="edit-button">
@@ -61,10 +64,12 @@ const MyPage = () => {
 				open={open} 
 				handleClickOpen={handleClickOpen} 
 				handleClose={handleClose}
-				inputProfile={inputProfile}
-				inputLink={inputLink}
-				handleEditFormClose={handleEditFormClose}
-				submitForm={submitForm} />
+				inputProfileEdit={inputProfile}
+				inputLinkEdit={inputLink}
+				handleEditFormClose={handleClose}
+				submitForm={submitForm}
+				editProfile={editProfile}
+				editLink={editLink} />
 		</div>
 	)
 }

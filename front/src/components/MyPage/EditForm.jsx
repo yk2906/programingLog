@@ -23,14 +23,14 @@ export default function EditForm(props) {
             multiline={true}
             rows={6}
             type={"text"}
-            value={props.profile}
-            onChange={props.inputProfile}
+            value={props.value}
+            onChange={props.inputProfileEdit}
           />
           <InputEditForm 
             label={"他サイト・サービスのリンク"} 
             type={"text"}
-            value={props.link}
-            onChange={props.inputLink}
+            value={props.value}
+            onChange={props.inputLinkEdit}
           />
         </DialogContent>
         <DialogActions>

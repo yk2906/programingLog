@@ -29,7 +29,7 @@ export default function InputedTextField(props) {
 			<Card className={classes.root} variant="outlined">
 				<CardHeader title={props.title} />
 				<CardContent>
-					<Typography className={classes.title} color="textPrimary" gutterBottom>
+					<Typography className={classes.title} color="textPrimary" gutterBottom value={props.value}>
 						{props.profile}
 						{props.link}
 					</Typography>
