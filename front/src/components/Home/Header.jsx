@@ -133,8 +133,8 @@ export default function Header(props) {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>ログイン</MenuItem>
-                <MenuItem onClick={handleClose}>新規登録</MenuItem>
+                <MenuItem component={Link} to="/sign_in" onClick={handleClose}>ログイン</MenuItem>
+                <MenuItem component={Link} to="/sign_up" onClick={handleClose}>新規登録</MenuItem>
               </Menu>
             </div>
           )}

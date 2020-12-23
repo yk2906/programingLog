@@ -37,6 +37,10 @@
     justify-content: center;
 }
 
+.task-create-new-textfield {
+    flex-basis: 60%;
+}
+
 .task-create-new-button {
     margin: 10px;
     align-self: center;

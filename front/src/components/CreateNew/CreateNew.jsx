@@ -60,8 +60,8 @@ const useStyles = makeStyles((theme) => ({
 				</div>
 				<h2>タスク</h2>
 				<div className="task-create-new">
-					<div>
-						<TextField id="outlined-basic" variant="outlined" />
+					<div className="task-create-new-textfield">
+						<TextField id="outlined-basic" variant="outlined" fullWidth="true" />
 					</div>
 					<div className="task-create-new-button">
 						<Button

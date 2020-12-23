@@ -10,6 +10,7 @@ import CompletingGraph from '../CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { red } from '@material-ui/core/colors';
 import Tasks from './Tasks';
+import BookMarks from './BookMarks';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,19 +55,25 @@ export default function Status() {
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>学習時間</h3>
           </Typography>
+            <div></div>
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>未達成タスク</h3>
+          </Typography>
             <div>
               <Tasks />
             </div>
-          </Typography>
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>達成タスク数</h3>
           </Typography>
-          <CompletingGraph />
+          <div>
+            <CompletingGraph />
+          </div>
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>ブックマーク</h3>
           </Typography>
+            <div>
+              <BookMarks />
+            </div>
         </CardContent>
     </Card>
     </div>
