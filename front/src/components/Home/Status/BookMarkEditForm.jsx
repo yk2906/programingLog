@@ -38,7 +38,7 @@ export default function BookMarkEditForm(props) {
             multiline={true}
             rows={6}
             type={"text"}
-            value={props.value}
+            value={props.editTitle}
             onChange={props.inputTitle}
           />
           <FormControl variant="outlined" className={classes.formControl} fullWidth="true">
@@ -63,7 +63,7 @@ export default function BookMarkEditForm(props) {
           <InputEditForm 
             label={"URL"} 
             type={"text"}
-            value={props.value}
+            value={props.editUrl}
             onChange={props.inputUrlEdit}
           />
         </DialogContent>

@@ -71,13 +71,15 @@ const BookMarks = () => {
             </div>
             <BookMarkEditForm 
                 open={open}
-                editTag={editTag}
 				handleClickOpen={handleClickOpen} 
                 handleClose={handleClose}
                 inputTitle={inputTitle}
                 inputTag={inputTag}
                 inputUrl={inputUrl}
                 addBookMark={addBookMark}
+                editTitle={editTitle}
+                editTag={editTag}
+                editUrl={editUrl}
 				 />
         </div>
     )
