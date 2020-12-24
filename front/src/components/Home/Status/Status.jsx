@@ -65,7 +65,7 @@ export default function Status() {
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>達成タスク数</h3>
           </Typography>
-          <div>
+          <div className="completing-graph">
             <CompletingGraph />
           </div>
           <Typography variant="subtitle1" color="textSecondary" component="p">

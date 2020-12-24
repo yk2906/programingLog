@@ -11,7 +11,7 @@ import SkipNextIcon from '@material-ui/icons/SkipNext';
 import Divider from '@material-ui/core/Divider';
 import Chip from '@material-ui/core/Chip';
 
-export default function BookMark() {
+export default function BookMark(props) {
 
   return (
     <Card>
@@ -19,14 +19,14 @@ export default function BookMark() {
         <div className="book-mark-tag">
           <CardContent>
             <Typography component="h5" variant="h5">
-              <Chip label="記事" />
+              <Chip label={props.tag} />
             </Typography>
           </CardContent>
         </div>
         <div className="book-mark-title">
           <CardContent>
             <Typography component="h5" variant="h5">
-              非同期処理実装方法について
+              {props.title}
             </Typography>
           </CardContent>
         </div>
@@ -35,7 +35,7 @@ export default function BookMark() {
         <div className="book-mark-url">
           <CardContent>
             <Typography component="h5" variant="h5">
-              https://qiita.com/kiyodori/items/da434d169755cbb20447
+              {props.url}
             </Typography>
           </CardContent>
         </div>

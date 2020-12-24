@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 
 const InputEditForm = (props) => {
     return(
-        <TextField 
+        <TextField
         variant={"outlined"}
         fullWidth={true}
         label={props.label}

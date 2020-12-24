@@ -116,9 +116,18 @@
     align-self: center;
 }
 
+.completing-graph {
+    margin: auto;
+    
+}
+
 .book-mark-area {
     width: 60%;
     margin: auto;
+}
+
+.book-mark-area-button {
+    margin: 20px;
 }
 
 .book-mark {
