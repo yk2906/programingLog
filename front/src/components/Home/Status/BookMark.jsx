@@ -9,66 +9,36 @@ import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import Divider from '@material-ui/core/Divider';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-  },
-  details: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  content: {
-    flex: '1 0 auto',
-  },
-  cover: {
-    width: 151,
-  },
-  controls: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
-}));
+import Chip from '@material-ui/core/Chip';
 
 export default function BookMark() {
-  const classes = useStyles();
-  const theme = useTheme();
 
   return (
-    <Card className={classes.root}>
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
-            Live From Space
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Mac Miller
-          </Typography>
-        </CardContent>
-        <Divider />
-        <div className={classes.controls}>
-          <IconButton aria-label="previous">
-            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-          </IconButton>
-          <IconButton aria-label="play/pause">
-            <PlayArrowIcon className={classes.playIcon} />
-          </IconButton>
-          <IconButton aria-label="next">
-            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-          </IconButton>
+    <Card>
+      <div className="book-mark">  
+        <div className="book-mark-tag">
+          <CardContent>
+            <Typography component="h5" variant="h5">
+              <Chip label="記事" />
+            </Typography>
+          </CardContent>
+        </div>
+        <div className="book-mark-title">
+          <CardContent>
+            <Typography component="h5" variant="h5">
+              非同期処理実装方法について
+            </Typography>
+          </CardContent>
         </div>
       </div>
-      <CardMedia
-        className={classes.cover}
-        image="/static/images/cards/live-from-space.jpg"
-        title="Live from space album cover"
-      />
+          <Divider />
+        <div className="book-mark-url">
+          <CardContent>
+            <Typography component="h5" variant="h5">
+              https://qiita.com/kiyodori/items/da434d169755cbb20447
+            </Typography>
+          </CardContent>
+        </div>
     </Card>
   );
 }

@@ -3,7 +3,8 @@ import BookMark from './BookMark'
 
 const BookMarks = () => {
     return(
-        <div>
+        <div className="book-mark-area">
+            <BookMark />
             <BookMark />
         </div>
     )

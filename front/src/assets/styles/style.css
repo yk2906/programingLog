@@ -115,3 +115,25 @@
 .tasks-add-button {
     align-self: center;
 }
+
+.book-mark-area {
+    width: 60%;
+    margin: auto;
+}
+
+.book-mark {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-mark-title {
+    flex-basis: 70%;
+}
+
+.book-mark-tag {
+    flex-basis: 30%;
+}
+
+.book-mark-url {
+    
+}
