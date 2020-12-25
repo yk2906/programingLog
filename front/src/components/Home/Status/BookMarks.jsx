@@ -60,9 +60,11 @@ const BookMarks = () => {
         return handleClose()
     }
 
+    
+
     return(
         <div className="book-mark-area">
-            <div>
+            <div >
                 {bookMark.map((value, index) => (
                     <BookMark title={value.title} 
                               tag={value.tag} 

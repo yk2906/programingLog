@@ -12,6 +12,8 @@ import { red } from '@material-ui/core/colors';
 import Divider from '@material-ui/core/Divider';
 import Tasks from './Tasks';
 import BookMarks from './BookMarks';
+import Carender from '../../CreateNew/Carender';
+import TextField from '@material-ui/core/TextField'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,6 +58,24 @@ export default function Status() {
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>学習時間</h3>
           </Typography>
+          <div className="status-study-time">
+            <h3>学習時間を記録する</h3>
+            <Carender />
+            <div className="status-study-time-input-area">
+              <TextField id="outlined-basic" variant="outlined" type="number" />
+              <h3>時間</h3>
+              <TextField id="outlined-basic" variant="outlined" type="number" />
+              <h3>分</h3>
+            </div>
+            <div className="status-study-time-record">
+              <h3>今日の学習時間</h3>
+              <h3>今月の学習時間</h3>
+              <h3>累計学習時間</h3>
+              <h3>1時間</h3>
+              <h3>1時間</h3>
+              <h3>1時間</h3>
+            </div>
+          </div>
           <Divider />
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>未達成タスク</h3>

@@ -1,3 +1,4 @@
+/*ホームコンテンツ一覧画面*/
 .app-bar-background {
     height: 100vh;
     background-color: wheat;
@@ -9,6 +10,7 @@
     justify-content: space-around;
 }
 
+/*新規コンテンツ作成画面*/
 
 .study-time {
     display: flex;
@@ -84,6 +86,8 @@
     justify-content: space-around;
 }
 
+/*ランディングページ*/
+
 .landing-page-content1 {
     /* flex-basis: 50%; */
     align-self: center;
@@ -102,8 +106,38 @@
     flex-basis: 50%;
 }
 
+/*新規アカウント登録画面*/
+
 .sign-up-button {
     flex-basis: 100%;
+}
+
+/*ホーム詳細画面*/
+
+.status-study-time {
+    width: 70%;
+    margin: auto;
+}
+
+.status-study-time-input-area {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.status-study-time-input-area h3 {
+    align-self: center;
+    margin: 10px;
+}
+
+.status-study-time-record {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.status-study-time-record h3 {
+    flex-basis: 33%;
 }
 
 .tasks-input-area {

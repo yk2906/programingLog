@@ -12,23 +12,25 @@ export default class CompletingGraph extends PureComponent {
 
   render() {
     return (
-      <BarChart
-        width={300}
-        height={300}
-        data={data}
-        margin={{
-          top: 5, right: 10, left: 10, bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name"/>
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="今日" fill="#8884d8" />
-        <Bar dataKey="今月" fill="#8884d8" />
-        <Bar dataKey="累計" fill="#8884d8" />
-      </BarChart>
+      <div>
+        <BarChart
+          width={300}
+          height={300}
+          data={data}
+          margin={{
+            top: 5, right: 10, left: 10, bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name"/>
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="今日" fill="#8884d8" />
+          <Bar dataKey="今月" fill="#8884d8" />
+          <Bar dataKey="累計" fill="#8884d8" />
+        </BarChart>
+      </div>
     );
   }
 }
