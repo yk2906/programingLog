@@ -53,7 +53,11 @@ const useStyles = makeStyles((theme) => ({
 				<div className="study-time-create-new">
 					<TextField id="outlined-basic" variant="outlined" type="number" />
 					<h3>時間</h3>
-					<TextField id="outlined-basic" variant="outlined" type="number" />
+					<TextField 
+					id="outlined-basic" 
+					variant="outlined" 
+					type="number"
+					 />
 					<h3>分</h3>
 					<h3>日付</h3>
 					<Carender />
