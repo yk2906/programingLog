@@ -43,7 +43,7 @@ const Tasks = () => {
 
   return(
     <div>
-      <div>
+      <div className="task">
         <List>
             {tasks.map((value, index) => (
               <Task 

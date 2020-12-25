@@ -15,7 +15,7 @@ const BookMarks = () => {
     const [open, setOpen] = useState(false)
     const [bookMark, setBookMark] = useState([initialState])
     const [editTitle, setEditTitle] = useState('')
-    const [editTag, setEditTag] = useState('')
+    const [editTag, setEditTag] = useState(["記事", "サイト", "ブログ", "書籍", "その他"])
     const [editUrl, setEditUrl] = useState('')
     const [editDelete, setEditDelete] = useState('')
 
@@ -29,14 +29,17 @@ const BookMarks = () => {
 
     const inputTitle = (e) => {
         setEditTitle(e.target.value)
+        console.log(e.target.value)
     }
 
     const inputTag = (e) => {
-        setEditTitle(e.target.value)
+        setEditTag(e.target.value)
+        console.log(e.target.value)
     }
 
     const inputUrl = (e) => {
-        setEditTitle(e.target.value)
+        setEditUrl(e.target.value)
+        console.log(e.target.value)
     }
 
     const inputDelete = (e) => {
@@ -61,7 +64,11 @@ const BookMarks = () => {
         <div className="book-mark-area">
             <div>
                 {bookMark.map((value, index) => (
-                    <BookMark title={value.editTitle} tag={value.editTag} url={value.editUrl} key={index.toString()} />
+                    <BookMark title={value.title} 
+                              tag={value.tag} 
+                              url={value.url} 
+                              key={index.toString()} 
+                    />
                 ))}
             </div>
             <div className="book-mark-area-button">

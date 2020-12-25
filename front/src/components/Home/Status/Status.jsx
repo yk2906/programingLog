@@ -9,6 +9,7 @@ import JavaScriptLogo from '../../../assets/img/javascript.svg'
 import CompletingGraph from '../CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { red } from '@material-ui/core/colors';
+import Divider from '@material-ui/core/Divider';
 import Tasks from './Tasks';
 import BookMarks from './BookMarks';
 
@@ -55,19 +56,21 @@ export default function Status() {
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>学習時間</h3>
           </Typography>
-            <div></div>
+          <Divider />
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>未達成タスク</h3>
           </Typography>
             <div>
               <Tasks />
             </div>
+            <Divider />
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>達成タスク数</h3>
           </Typography>
           <div className="completing-graph">
             <CompletingGraph />
           </div>
+          <Divider />
           <Typography variant="subtitle1" color="textSecondary" component="p">
             <h3>ブックマーク</h3>
           </Typography>

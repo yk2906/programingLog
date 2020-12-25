@@ -23,9 +23,10 @@ export default function BookMark(props) {
             </Typography>
           </CardContent>
         </div>
+        <Divider />
         <div className="book-mark-title">
           <CardContent>
-            <Typography component="h5" variant="h5">
+            <Typography component="h6" variant="h6">
               {props.title}
             </Typography>
           </CardContent>
@@ -35,7 +36,7 @@ export default function BookMark(props) {
         <div className="book-mark-url">
           <CardContent>
             <Typography component="h5" variant="h5">
-              {props.url}
+              <a href={props.url}>{props.url}</a>
             </Typography>
           </CardContent>
         </div>

@@ -46,32 +46,32 @@ export default function BookMarkEditForm(props) {
             <Select
               labelId="demo-simple-select-outlined-label"
               id="demo-simple-select-outlined"
-              value={props.editTag}
+              value={props.tag}
               onChange={props.inputTag}
               label="タグ"
             >
-              <MenuItem value="">
+              {/* <MenuItem value="">
                 <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>記事</MenuItem>
-              <MenuItem value={20}>サイト</MenuItem>
-              <MenuItem value={30}>ブログ</MenuItem>
-              <MenuItem value={40}>書籍</MenuItem>
-              <MenuItem value={50}>その他</MenuItem>
+              </MenuItem> */}
+              <MenuItem value={"記事"}>記事</MenuItem>
+              <MenuItem value={"サイト"}>サイト</MenuItem>
+              <MenuItem value={"ブログ"}>ブログ</MenuItem>
+              <MenuItem value={"書籍"}>書籍</MenuItem>
+              <MenuItem value={"その他"}>その他</MenuItem>
             </Select>
           </FormControl>
           <InputEditForm 
             label={"URL"} 
             type={"text"}
             value={props.editUrl}
-            onChange={props.inputUrlEdit}
+            onChange={props.inputUrl}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={props.handleClose} color="primary">
             キャンセル
           </Button>
-          <Button onClick={props.addBookMark} color="primary" autoFocus >
+          <Button onClick={props.addBookMark} color="primary" autoFocus disabled={(props.editTitle, props.editTag, props.editUrl) === ""}>
             完了
           </Button>
         </DialogActions>

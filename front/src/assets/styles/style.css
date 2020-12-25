@@ -32,6 +32,11 @@
     align-self: center;
 }
 
+.task {
+    width: 50%;
+    margin: auto;
+}
+
 .task-create-new {
     display: flex;
     justify-content: center;
@@ -118,7 +123,7 @@
 
 .completing-graph {
     margin: auto;
-    
+    width: 50%;
 }
 
 .book-mark-area {
