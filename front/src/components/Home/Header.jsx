@@ -72,6 +72,16 @@ export default function Header(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
+  const initialState = {
+    language: '',
+    hour: '',
+    minute: '',
+    date: '',
+    task: ''
+  }
+
+  const [content, setContent] = useState([initialState])
+
   // const handleChange = (event) => {
   //   setAuth(event.target.checked);
   // };
@@ -143,7 +153,7 @@ export default function Header(props) {
       <div className="app-bar-background">
         <TabPanel style={{backgroundColor: "wheat"}}>
           <Switch>
-            <Route path="/home" component={CardLists} />
+            <Route path="/home" render={() => <CardLists content={content} />} />
             <Route path="/new" component={CreateNew} />
             <Route path="/mypage" component={MyPage} />
             <Route path="/status" component={Status} />

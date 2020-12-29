@@ -9,7 +9,7 @@ import { red } from '@material-ui/core/colors';
 import JavaScriptLogo from '../../assets/img/javascript.svg';
 import CompletingGraph from './CompletingGraph';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import { BrowserRouter as Router, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, useHistory,withRouter } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,11 +34,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CardList(props) {
+
+const CardList = (props) => {
   const classes = useStyles();
   const history = useHistory();
   const hancleLink = path => history.push(path);
-
   return (
     <Card className={classes.root} onClick={() => hancleLink(`/status`)}>
       <CardActionArea>
@@ -81,3 +81,8 @@ export default function CardList(props) {
     </Card>
   );
 }
+
+export default withRouter(CardList)
+  
+
+  
