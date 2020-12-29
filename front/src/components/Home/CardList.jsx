@@ -53,28 +53,22 @@ const CardList = (props) => {
             </Typography>}
         />
         <CardContent>
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>学習時間</h3>
+            <h2>学習時間</h2>
             <div className="study-time">
-              <h4>今日</h4>
-              <h4>今月</h4>
-              <h4>合計</h4>
+              <h3>今日</h3>
+              <h3>今月</h3>
+              <h3>合計</h3>
               <p>1h</p>
               <p>1h</p>
               <p>1h</p>
             </div>
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>未達成タスク</h3>
+            <h2>未達成タスク</h2>
             <div className="imcomplet-task">
               <p>配列、for文を勉強する</p>
               <p>非同期処理を勉強する</p>
               <p>関数を実装する</p>
             </div>
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>達成タスク数</h3>
-          </Typography>
+            <h2>達成タスク数</h2>
           <CompletingGraph />
         </CardContent>
       </CardActionArea>

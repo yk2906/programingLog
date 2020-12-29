@@ -55,9 +55,7 @@ export default function Status() {
             </Typography>}
         />
         <CardContent>
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>学習時間</h3>
-          </Typography>
+            <h2>学習時間</h2>
           <div className="status-study-time">
             <h3>学習時間を記録する</h3>
             <Carender />
@@ -77,23 +75,17 @@ export default function Status() {
             </div>
           </div>
           <Divider />
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>未達成タスク</h3>
-          </Typography>
+          <h2>未達成タスク</h2>
             <div>
               <Tasks />
             </div>
             <Divider />
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>達成タスク数</h3>
-          </Typography>
-          <div className="completing-graph">
-            <CompletingGraph />
-          </div>
+          <h2>達成タスク数</h2>
+            <div className="completing-graph">
+              <CompletingGraph />
+            </div>
           <Divider />
-          <Typography variant="subtitle1" color="textSecondary" component="p">
-            <h3>ブックマーク</h3>
-          </Typography>
+          <h2>ブックマーク</h2>
             <div>
               <BookMarks />
             </div>
