@@ -4,9 +4,10 @@ import InputedTextField from './InputedTextField';
 import Button from '@material-ui/core/Button';
 import EditForm from './EditForm';
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
+import FileInput from './FileInput';
 import axios from 'axios'
 
-const MyPage = () => {
+const MyPage = (props) => {
 	const initialState = {
 		profile: '',
 		link: ''
@@ -40,13 +41,6 @@ const MyPage = () => {
 	const handleClose = () => {
 		setOpen(false);
 	};
-
-	const fileInput = React.createRef();
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		alert(`Selected file - ${fileInput.current.files[0].name}`)
-	};
  
 	return(
 		<div className="mypage">
@@ -58,8 +52,8 @@ const MyPage = () => {
 				/>
 			</div>
 			<div className="photo-icon">
-				<form onSubmit={handleSubmit}>
-					<input type="file"/>
+				<form onSubmit={props.handleSubmit}>
+					<input className="file-input" type="file" ref={props.ref} />
 					<button type="submit"><AddAPhotoIcon /></button>
 				</form>
 			</div>
