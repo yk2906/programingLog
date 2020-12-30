@@ -3,6 +3,8 @@ import Avatar from '@material-ui/core/Avatar';
 import InputedTextField from './InputedTextField';
 import Button from '@material-ui/core/Button';
 import EditForm from './EditForm';
+import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
+import axios from 'axios'
 
 const MyPage = () => {
 	const initialState = {
@@ -39,6 +41,12 @@ const MyPage = () => {
 		setOpen(false);
 	};
 
+	const fileInput = React.createRef();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		alert(`Selected file - ${fileInput.current.files[0].name}`)
+	};
  
 	return(
 		<div className="mypage">
@@ -48,6 +56,12 @@ const MyPage = () => {
 				src="/static/images/avatar/1.jpg"
 				style={{ height: 100, width: 100, margin: 'auto' }}
 				/>
+			</div>
+			<div className="photo-icon">
+				<form onSubmit={handleSubmit}>
+					<input type="file"/>
+					<button type="submit"><AddAPhotoIcon /></button>
+				</form>
 			</div>
 			<div className="inputed-text-field">
 				<InputedTextField title={"プロフィール"} profile={state.profile} />

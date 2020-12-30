@@ -26,9 +26,9 @@ export default class CompletingGraph extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="今日" fill="#8884d8" />
-          <Bar dataKey="今月" fill="red" />
-          <Bar dataKey="累計" fill="green" />
+          <Bar barSize={40} dataKey="今日" fill="#8884d8" />
+          <Bar barSize={40} dataKey="今月" fill="red" />
+          <Bar barSize={40} dataKey="累計" fill="green" />
         </BarChart>
       </div>
     );

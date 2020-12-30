@@ -65,6 +65,12 @@
     margin: 20px auto 20px auto;
 }
 
+.photo-icon {
+    margin: auto;
+    display: inline;
+    cursor: pointer;
+}
+
 .inputed-text-field {
     width: 50%;
     margin: 0 auto 0 auto;
