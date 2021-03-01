@@ -18,6 +18,7 @@ const BookMarks = () => {
     const [editTag, setEditTag] = useState(["記事", "サイト", "ブログ", "書籍", "その他"])
     const [editUrl, setEditUrl] = useState('')
     const [editDelete, setEditDelete] = useState('')
+    const [showFlag, setShowFlag] = useState(false)
 
     const handleClickOpen = () => {
 		setOpen(true)
@@ -57,22 +58,24 @@ const BookMarks = () => {
         setEditTag('')
         setEditUrl('')
         setEditDelete('')
+        setShowFlag(true)
         return handleClose()
     }
 
-    
+
 
     return(
         <div className="book-mark-area">
-            <div >
+            {showFlag ? <div>
                 {bookMark.map((value, index) => (
-                    <BookMark title={value.title} 
-                              tag={value.tag} 
-                              url={value.url} 
-                              key={index.toString()} 
+                    <BookMark title={value.title}
+                              tag={value.tag}
+                              url={value.url}
+                              key={index.toString()}
                     />
                 ))}
-            </div>
+            </div> : null}
+            
             <div className="book-mark-area-button">
                 <Button variant="contained" color="primary" onClick={handleClickOpen}>
                     追加する
@@ -89,7 +92,7 @@ const BookMarks = () => {
                 editTitle={editTitle}
                 editTag={editTag}
                 editUrl={editUrl}
-				 />
+			 />
         </div>
     )
 }

@@ -4,7 +4,7 @@ import InputedTextField from './InputedTextField';
 import Button from '@material-ui/core/Button';
 import EditForm from './EditForm';
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
-import FileInput from './FileInput';
+import FileInput from './FileUpload';
 import axios from 'axios'
 
 const MyPage = (props) => {
@@ -17,6 +17,8 @@ const MyPage = (props) => {
 	const [state, setState] = useState({initialState})
 	const [editProfile, setEditProfile] = useState('')
 	const [editLink, setEditLink] = useState('')
+
+	const [file, setFile] = useState('')
 
 	const inputProfile = (e) => {
 		setEditProfile(e.target.value)
@@ -41,6 +43,10 @@ const MyPage = (props) => {
 	const handleClose = () => {
 		setOpen(false);
 	};
+
+	const onChange = e => {
+		setFile(e.target.files[0])
+	}
  
 	return(
 		<div className="mypage">
@@ -52,9 +58,9 @@ const MyPage = (props) => {
 				/>
 			</div>
 			<div className="photo-icon">
-				<form onSubmit={props.handleSubmit}>
-					<input className="file-input" type="file" ref={props.ref} />
-					<button type="submit"><AddAPhotoIcon /></button>
+				<form>
+					{/* <input className="file-input" type="file" ref={props.ref} /> */}
+					{/* <input type="file" value='Upload' onChange={onChange} /><AddAPhotoIcon /> */}
 				</form>
 			</div>
 			<div className="inputed-text-field">

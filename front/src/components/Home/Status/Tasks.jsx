@@ -9,7 +9,7 @@ import Task from './Task'
 import CheckBox from '@material-ui/core/Checkbox'
 
     
-const Tasks = () => {
+const Tasks = (props) => {
 
   const initialState = {
     title: '',
@@ -19,12 +19,13 @@ const Tasks = () => {
 
   const [tasks, setTasks] = useState([initialState])
   const [taskName, setTaskName] = useState('')
+  const [showFlag, setShowFlag] = useState(false)
 
   const inputTaskName = (e) => {
     setTaskName(e.target.value)
   }
 
-  const addTask = () => {
+  const addTask = (props) => {
     setTasks([...tasks, {
       title: taskName,
       doing: false,
@@ -32,6 +33,7 @@ const Tasks = () => {
       delete: <DeleteIcon />
     }])
     setTaskName('')
+    setShowFlag(true)
   }
 
   const handleCheckBoxToggle = (value) => {
@@ -43,7 +45,7 @@ const Tasks = () => {
 
   return(
     <div>
-      <div className="task">
+      {showFlag ? <div className="task">
         <List>
             {tasks.map((value, index) => (
               <Task 
@@ -55,7 +57,7 @@ const Tasks = () => {
                 handleCheckBoxToggle={handleCheckBoxToggle} />
             ))}
         </List>
-      </div>
+      </div> : null}
       <div className="tasks-input-area">
         <div className="tasks-textfield">
           <TextField 
